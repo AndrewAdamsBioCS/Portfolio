@@ -6,5 +6,5 @@
 
 <canvas id="play-puzz" width="200" height="200"></canvas>
 
-	<script src="puzzleSolver.js?random=<?= uniqid() ?>"></script>
+	<script src="/scripts/puzzleSolver.js?random=<?= uniqid() ?>"></script>
 </div>

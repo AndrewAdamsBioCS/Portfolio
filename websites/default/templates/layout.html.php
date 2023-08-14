@@ -39,7 +39,7 @@
 </header>
 
 <main>
-<script src="nav.js?random=<?= uniqid() ?>"></script>
+<script type="text/javascript" src="/scripts/nav.js"></script>
 <?=$output?>
 </main>
 

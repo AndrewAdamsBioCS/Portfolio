@@ -22,5 +22,5 @@
 		<p>Burnaby, British Columbia, Canada</p>	
 </div>
 <div class="about-more-info" style="margin-top:50px;">
-	This website constructed using the following technologies: HTML, PHP, Docker
+	This website constructed using the following technologies: Docker, HTML, CSS, PHP, JavaScript
 </div>
