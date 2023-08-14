@@ -1,0 +1,233 @@
+:root {
+    --header-height: 144px;
+}
+
+* {
+    font-family:Calibri;
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    height: var(--header-height);
+    background-color: black;
+    color: white;
+    z-index: 100;
+}
+
+header h1 {
+    text-align: center;
+    margin: 0.5em;
+    padding: 0.5em;
+    border: 1px solid white;
+}
+
+/*.header-title-bar {
+    min-width: 100%;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid white;
+}*/
+
+.header-title-bar-side {
+    position: absolute;
+    top: 2.5em;
+    width: 33%;
+    color: forestgreen;
+    font-family: 'Courier New';
+    overflow: hidden;
+}
+
+.header-menu {
+    /*float: right;*/
+    font-size: large;
+    text-align: center;
+}
+
+.header-menu a.header-nav-link {
+    text-decoration: none;
+    color: cornflowerblue;
+    border-radius: 10px 10px 0 0;
+    padding: 5px;
+    padding-bottom: calc(1em - 1px);
+}
+
+.header-menu a.header-nav-link.active {
+    background-color: tan;
+    color: black;
+}
+
+.header-menu a.header-nav-link:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+body {
+    position: absolute;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+main {
+    float: left;
+    padding: 20px;
+    width: 100vw;
+    margin-top: var(--header-height);
+    height: calc(100% - var(--header-height));
+    background-color: tan;
+    overflow: scroll;
+}
+
+#about-container {
+    width: 80%;
+    height: 100%;
+    margin-left: 15%;
+    padding: 10px;
+}
+#about-div {
+    float: left;
+    width: 50%;
+    padding: 30px;
+    font-size: x-large;
+    background-color: wheat;
+    border: 1px white dashed;
+    border-radius: 10px;
+}
+
+.about-more-info {
+    float: left;
+    width: 30%;
+    margin-left: 10%;
+    padding: 30px;
+    font-size: large;
+    border: 1px red solid;
+}
+
+#about-div p {
+}
+
+
+.project-div {
+    display: block;
+    padding: 10px;
+    float: left;
+    min-width: 100%;
+    height: 50%;
+    background-color: wheat;
+    background-clip: content-box;
+}
+
+.project-description {
+    padding: 40px;
+    width: 50%;
+    height: 100%;
+    float: left;
+    border: 1px white dashed;
+    border-bottom: 5px black solid;
+    overflow: scroll;
+}
+
+.project-description h1 {
+    font-style: italic;
+}
+
+.project-description a {
+    font-style: italic;
+}
+
+.project-description p {
+    font-size:larger;
+    padding: 10px;
+}
+
+.project-screenshot {
+    padding: 30px;
+    width: 50%;
+    height: 100%;
+    border: 1px white dashed;
+    border-bottom: 5px black solid;
+    float: left;
+}
+
+.project-screenshot img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* The side navigation menu */
+.sidebar {
+    width: calc(25% - 40px);
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: wheat;
+    position: fixed;
+    overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a.sb-nav-link {
+    display: block;
+    color: black;
+    font-size: x-large;
+    padding: 16px;
+    text-decoration: none;
+    /*text-align: right;*/
+    border-bottom: 5px black solid;
+}
+
+/* Active link */
+.sidebar a.sb-nav-link.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a.sb-nav-link:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+.work-div {
+    /*margin-left: calc(25% + 20px);*/
+    margin-top: 10px;
+    margin-left: 25%;
+    width: 50%;
+}
+
+.experience-div {
+   /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+       */
+    
+    padding: 30px;
+    margin-bottom: 20px;
+    /*/width: 50%;*/
+    /*height: 50%;*/
+    
+    font-size: large;
+    border: 1px white dashed;
+    overflow: scroll;
+}
+
+.experience-duties {
+    padding: 10px;
+}
+
+#puzzle-solver {
+    width: 50%;
+    margin-left: 25%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5%;
+    background-color: lightblue;
+}

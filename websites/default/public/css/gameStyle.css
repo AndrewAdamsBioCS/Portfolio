@@ -1,0 +1,232 @@
+:root {
+    --game-pane-width: 840px;
+}
+
+#game-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 420px;
+    min-width: var(--game-pane-width);
+    transform: translate(-50%, -50%);
+    /*box-sizing: border-box;*/
+}
+
+
+#play-div{
+	position: relative;
+	float:left;
+    display:inline-block;
+	/*width:66.66%;*/
+	width:420px;
+	height:420px;
+	background-color: black;
+	box-sizing: border-box;
+	border: 10px green solid
+}
+
+#playCanv {
+	position: absolute;
+	z-index: 1;
+}
+
+#end-game-div {
+	font-family: Arial;
+	position: absolute;
+	z-index: 2;
+	visibility: hidden;
+	width: 50%;
+	height: 25%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 0px;
+	margin: 0px;
+	background-color: yellow;
+	box-sizing: border-box;
+	border: 5px green solid;
+}
+
+
+#info-div {
+    float: left;
+    display: inline-block;
+    /*width:33.33%;*/
+    width: 220px;
+    height: 420px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 10px green solid;
+    overflow: hidden;
+}
+
+#stats-div {
+	/*position:relative;*/
+	font-family: Arial;
+	background-color: yellow;
+	width: 200px;
+	height: 33.3%;
+	margin: 0px;
+	/*
+	padding: 0px;
+	padding-top: 0px;
+	line-height: 60%;
+		*/
+	box-sizing: border-box;
+	border: 5px black solid;
+    
+}
+
+#stat-labels{
+	margin: 0px;
+	float: left;
+	width: 50%;
+	padding-top:10px;
+	text-align: right;
+	/*border: 1px black solid;
+	border-right: 0px;*/
+	box-sizing: border-box;
+}
+
+#stat-values {
+	margin: 0px;
+	padding-left: 5px;
+	padding-top: 10px;
+	width: 50%;
+	float: left;
+	/*border: 1px black solid;
+	border-left: 0px;*/
+	box-sizing: border-box;
+}
+
+.info-header {
+	font-family: Arial;
+	font-weight: 800;
+	text-align: center;
+	font-style: italic;
+	font-size: 20px;
+	margin: 0px;
+	padding: 5px;
+	background-color: lightblue;
+	border-bottom: 1px black solid;
+	box-sizing: border-box;
+}
+
+#anim-div{
+	/*position: relative;*/
+	float: right;
+	width: 200px;
+	height: 33.33%;
+	padding: 0px;
+	margin: 0px;
+	background-color: yellow;
+	box-sizing: border-box;
+	border: 5px black solid;
+	border-top: 0px;
+	border-bottom: 0px;
+}
+
+#oven-div{
+	float: left;
+	width: 200px;
+	height: 33.33%;
+	background-color: yellow;
+	box-sizing: border-box;
+	border: 5px black solid;
+	border-top: 0px black solid;
+}
+
+#bulletGenCanv{
+    width:120px;
+    height:120px;
+    /*transform: translate(-50%, -50%);*/
+}
+
+#addBulletCanv{
+	width:100%;
+    height:100%;
+    box-sizing: border-box;
+    /*border: 5px red solid;*/
+
+}
+
+.center{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
+.unhidden {
+	display: contents;
+}
+
+#infoCanv{
+	box-sizing: border-box;
+}
+
+@font-face{
+ font-family:'Digital';
+ src: url('fonts/digital.ttf');
+}
+
+#high-scores-div {
+    background-color: yellow;
+    float: left;
+    display: inline-block;
+    width: 200px;
+    height: 420px;
+    box-sizing: border-box;
+    border: 10px green solid;
+    overflow: hidden;
+}
+
+#high-scores-list {
+	font-family: Arial;
+	background-color: yellow;
+	width: 100%;
+	height: 50%;
+	float: left;
+	box-sizing: border-box;
+	border: 5px black solid;
+}
+
+#high-score-ranks {
+	float: left;
+	padding-left: 5px;
+}
+
+#high-score-names {
+	float: left;
+	padding-left: 5px;
+}
+
+#high-score-scores {
+	float: right;
+	padding-right:5px;
+	margin:0px;
+	text-align:right;
+	font-weight:bold;
+}
+
+#instructions-div {
+    font-family: Arial;
+    width: 100%;
+    height: 50%;
+    float: left;
+    box-sizing: border-box;
+    border: 5px black solid;
+    border-top: 0px;
+    padding: 5px;
+    font-size: small;
+}
+
+
+#commentary-div {
+    margin-top: 10%;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: wheat;
+}
