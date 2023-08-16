@@ -10,7 +10,7 @@
 	<div class="experience-div">
 		<h1>Metabolic Insights, Inc.</h1>
 		<p><i>Bioengineering Researcher (student internship)</i></p>
-		<p>2019</p>
+		<p>2019; Burnaby, British Columbia, Canada</p>
 
 		<div style = "margin: 15px; padding: 10px; border: 1px black dotted;">
 		A small biotech startup based in British Columbia, Canada. During my student internship I worked on development of the company's first product: a saliva-based testing device for measuring user insulin levels. My primary contributions to the project were in software development (both end-product device software and in-house testing software) and data analysis (for calibration of the device sensor).
@@ -58,7 +58,7 @@
 	<div class="experience-div">
 		<h1>STEMCELL Technologies</h1>
 		<p><i>Laboratory Research Assistant (student internship)</i></p>
-		<p>2016 - 2017</p>
+		<p>2016 - 2017; Vancouver, British Columbia, Canada</p>
 
 		<div style = "margin: 15px; padding: 10px; border: 1px black dotted;">
 		STEMCELL description.
@@ -66,15 +66,15 @@
 
 		<div style = "padding: 10px;">
 			<ul>
-			<li>1</li>
+			<li>Investigated gene expression levels in experimental cells by performing qPCR analysis on RNA samples</li>
 
-			<li>2</li>
+			<li>Evaluated quality of cell colonies; performed passaging of cell lines; practiced sterile technique to prevent bacterial/fungal contamination of cell culture experiments</li>
 
-			<li>3</li>
+			<li>Supported team members by plating of cells for use in their cell culture experiments; tested various cell culture media formulations to ensure they performed up to standard</li>
 			</ul>
 		</div>
 
-		<p><strong>Skills</strong>: Python, C#, ASP.NET, data analysis, statistics, AI / machine learning</p>
+		<p><strong>Skills</strong>: qPCR analysis, maintenance of cell cultures, RNA extraction, cryopreservation</p>
 
 		<p><a href="https://www.stemcell.com/" target="_blank">stemcell.com</a></p>
 	</div>
@@ -82,36 +82,34 @@
 	<div class="experience-div">
 		<h1>Global ARD Testing Services</h1>
 		<p><i>Laboratory Assistant / General Laborer</i></p>
-		<p>2020 - 2021</p>
+		<p>2020 - 2021; Burnaby, British Columbia, Canada</p>
 
 		<div style = "margin: 15px; padding: 10px; border: 1px black dotted;">
-		Geochemical testing laboratory based in Burnaby, BC.
+		Geochemical testing laboratory based in Burnaby, British Columbia.
 		</div>
 
 		<div style = "padding: 10px;">
 			<ul>
-			<li>1</li>
+			<li>Assisted in laboratory work (weighing samples, measuring pH, adding chemical reagents, cleaning and setting up test equipment); prepared mineral/soil samples for testing; received sample shipments into inventory</li>
 
-			<li>2</li>
+			<li>Maintained integrity of test results by adhering to good quality control principles in the handling of samples; archived inventory in orderly manner for future retrieval</li>
 
-			<li>3</li>
+			<li>Contributed to laboratory upgrade projects, such as construction of new work spaces; performed in-house fabrication of testing equipment; assisted in repair of machines</li>
 			</ul>
 		</div>
 
-		<p><strong>Skills</strong>: Python, C#, ASP.NET, data analysis, statistics, AI / machine learning</p>
-
-		<p><a href="https://www.stemcell.com/" target="_blank">stemcell.com</a></p>
+		<p><strong>Skills</strong>:</p>
 	</div>
 </div> <!-- End lab-div -->
 
 <div class="work-div" id="other-div" style="display: none;">
 	<div class="experience-div">
 		<h1>Merit Logistics</h1>
-		<p><i>Associate</i></p>
-		<p>2022 - 2023</p>
+		<p><i>Associate, Ferguson Distribution Center</i></p>
+		<p>2022 - 2023; Celina, Ohio, USA</p>
 
 		<div style = "margin: 15px; padding: 10px; border: 1px black dotted;">
-		STEMCELL description.
+		Description
 		</div>
 
 		<div style = "padding: 10px;">
@@ -128,59 +126,57 @@
 	<div class="experience-div">
 		<h1>Kroger</h1>
 		<p><i>Meat Clerk</i></p>
-		<p>2020 - 2021</p>
+		<p>2022; St. Marys, Ohio, USA</p>
 
 		<div style = "margin: 15px; padding: 10px; border: 1px black dotted;">
-		Geochemical testing laboratory based in Burnaby, BC.
+		Grocery store meat department.
 		</div>
 
 		<div style = "padding: 10px;">
 			<ul>
-			<li>1</li>
+			<li>Serviced customers from meat/seafood display cases, responding to individual requests and specifications</li>
 
-			<li>2</li>
+			<li>Stocked and maintained appearance of food coolers; prepared/packaged food items</li>
 
-			<li>3</li>
+			<li>Followed proper food safety guidelines, logging temperature of display case items and ensuring proper dating and storage of perishable food items</li>
 			</ul>
 		</div>
 	</div>
 
 	<div class="experience-div">
 		<h1>Michael's Books</h1>
-		<p><i>Bellingham, Washington</i></p>
-		<p>2014</p>
+		<p><i>Bookseller</i></p>
+		<p>2014; Bellingham, Washington, USA</p>
 
 		<div style = "margin: 15px; padding: 10px; border: 1px black dotted;">
-		Geochemical testing laboratory based in Burnaby, BC.
+		Small bookstore specializing in used and rare books.
 		</div>
 
 		<div style = "padding: 10px;">
 			<ul>
-			<li>1</li>
+			<li>Assisted customers; operated cash register; worked directly with owner on store projects (processing bulk acquisitions, reorganization, event preparation, etc)</li>
 
-			<li>2</li>
-
-			<li>3</li>
+			<li>Purchased used books for resale based on condition and marketability, contributing to quality of store inventory</li>
 			</ul>
 		</div>
 	</div>
 
 	<div class="experience-div">
 		<h1>Powell's Books</h1>
-		<p><i>Portland, Oregon</i></p>
-		<p>2012 - 2014</p>
+		<p><i>Warehouse Associate</i></p>
+		<p>2012 - 2014; Portland, Oregon, USA</p>
 
 		<div style = "margin: 15px; padding: 10px; border: 1px black dotted;">
-		Geochemical testing laboratory based in Burnaby, BC.
+		Warehouse location for large bookstore in Portland, Oregon. Powell's Books is renowned as one of the largest independent bookstores in the world and is a major Portland tourist attraction.
 		</div>
 
 		<div style = "padding: 10px;">
 			<ul>
-			<li>1</li>
+			<li>Received orders into inventory; verified invoice information and performed quality control on departmental orders; staged books for delivery to retail locations</li>
 
-			<li>2</li>
+			<li>Maintained overstock inventory; oversaw replenishment of stock at retail locations</li>
 
-			<li>3</li>
+			<li>Received bulk shipments from freight carriers; sorted/consolidated orders; staged orders for receiving</li>
 			</ul>
 		</div>
 	</div>
@@ -188,20 +184,8 @@
 
 
 <div hidden>
-STEMCELL Technologies, Vancouver, BC, Canada
-Laboratory Research Assistant
 
-2016 – 2017
-
-Supported team members by plating of cells for use in their cell culture experiments; tested various cell culture media formulations to ensure they performed up to standard
-
-Practiced sterile technique to prevent bacterial/fungal contamination of cell culture experiments; assessed quality of cell colonies; performed passaging of cell lines
-
-Investigated gene expression levels in experimental cells by performing qPCR analysis on RNA samples
   
-<a href="http://www.stemcell.com">stemcell.com</a>
-
-
 Global ARD Testing Services Burnaby, BC, Canada
 General Laborer, geochemical testing laboratory
 2020 – 2021
