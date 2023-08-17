@@ -53,8 +53,6 @@ def perform_move(puzzle, row, col):
 
 # Toggle; if cell is a 1, change to 0, and vice versa
 def toggle(puzzle, row, col):
-    print("test row: ", row)
-    print("test col: ", col)
     cell = puzzle[row][col]
     if cell == 0:
         puzzle[row][col] = 1

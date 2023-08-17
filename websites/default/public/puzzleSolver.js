@@ -4,22 +4,31 @@ window.onload = function () {
     cellWidth = puzzCanv.width / 4;
     cellHeight = puzzCanv.height / 4;
 
+    solDiv = document.getElementById("solutionDiv");
     puzzCanv.addEventListener("click", userClick);
 }
 
 var puzzStr = "";
 var puzzArr = [];
+var puzzStartStateCopy = [];
+var solvedArr = [];
+var solvedStats = [];
+var solvedCurrState = [];
+var playerMove = false;
 
 function newPuzz() {
     puzzStr = document.getElementById("newPuzzArr").innerHTML;
-    console.log(puzzStr);
     puzzArr = JSON.parse(puzzStr);
-    console.log(puzzArr);
 
+    // Save starting state for use in solution algorithms
+    puzzStartStateCopy = JSON.parse(JSON.stringify(puzzArr));
+
+    clearSolution();
     draw();
 }
 
 function userClick(e) {
+    console.log("userclick");
     // Get click coordinates
     let rect = puzzCanv.getBoundingClientRect();
     let row = e.clientY - rect.top;
@@ -28,8 +37,11 @@ function userClick(e) {
     // Get cell coordinates from click coordinates
     let rowCell = Math.floor(row / cellHeight);
     let colCell = Math.floor(col / cellWidth);
-    
+
+    playerMove = true;
     perform_move(rowCell, colCell);
+    playerMove = false;
+    draw();
 }
 
 function draw() {
@@ -73,13 +85,124 @@ function perform_move(row, col) {
         toggle(row, col + 1);
     }
 
-    draw();
+    //draw();
 }
 
 function toggle(row, col) {
-    if (puzzArr[row][col] == 0) {
-        puzzArr[row][col] = 1;
+    if (playerMove) {
+        console.log("playermove");
+        if (puzzArr[row][col] == 0) {
+            puzzArr[row][col] = 1;
+        } else {
+            puzzArr[row][col] = 0;
+        }
     } else {
-        puzzArr[row][col] = 0;
+        if (solvedCurrState[row][col] == 0) {
+            solvedCurrState[row][col] = 1;
+        } else {
+            solvedCurrState[row][col] = 0;
+        }
+    }
+}
+
+function showSolution() {
+    // Clear solution div, in case solution algorithm has already been run
+    clearSolution();
+
+    // Reset solution variables
+    solvedCurrState = JSON.parse(JSON.stringify(puzzStartStateCopy));
+    solvedStats = [];
+
+    solvedStr = document.getElementById("solvedPuzzArr").innerHTML;
+    solvedArr = JSON.parse(solvedStr);
+
+    solvedStats.push(solvedArr.pop());
+    solvedStats.push(solvedArr.pop());
+
+    statStr = "Search steps: " + solvedStats[1] + "\n ";
+    statStr += "Time: " + solvedStats[0];
+    searchStats = document.createTextNode(statStr);
+
+    searchStatsDiv = document.createElement("div");
+    searchStatsDiv.style.margin = "10px";
+    searchStatsDiv.appendChild(searchStats);
+    solDiv.appendChild(searchStatsDiv);
+
+    // Create canvas elements for all solution steps
+    for (var move = 0; move < solvedArr.length + 1; move++) {
+        moveDiv = document.createElement("div");
+        moveDiv.style.display = "inline-block";
+        moveDiv.style.margin = "10px";
+
+        thisMove = move + 1;
+        if (move < solvedArr.length) {
+            detailStr = "Move " + thisMove + ": ";
+            thisRow = solvedArr[move][0] + 1;
+            thisCol = solvedArr[move][1] + 1;
+            detailStr += "Row " + thisRow + ", Column " + thisCol;
+        } else {
+            detailStr = "Solved!";
+        }
+
+        moveDetailDiv = document.createElement("div");
+        moveDetail = document.createTextNode(detailStr);
+
+        moveCanv = document.createElement("canvas");
+        moveCanv.width = 200;
+        moveCanv.height = 200;
+        moveCtx = moveCanv.getContext("2d");
+        moveCtx.fillStyle = "black";
+        moveCtx.fillRect(0, 0, moveCanv.width, moveCanv.height);
+
+        // Draw move
+        moveCtx.fillStyle = "white";
+        moveCtx.strokeStyle = "blue";
+        for (var i = 0; i < 4; i++) {
+            for (var j = 0; j < 4; j++) {
+                topLeftX = cellWidth * j;
+                topLeftY = cellHeight * i;
+
+                if (solvedCurrState[i][j] == 1) {
+                    moveCtx.fillRect(topLeftX, topLeftY, cellWidth, cellHeight);
+                    moveCtx.strokeRect(topLeftX, topLeftY, cellWidth, cellHeight);
+                } else {
+                    moveCtx.strokeRect(topLeftX, topLeftY, cellWidth, cellHeight);
+                }
+
+                
+                // Distinguish if cell is current solution step
+                if (move < solvedArr.length && (i == solvedArr[move][0] && j == solvedArr[move][1])) {
+                    moveCtx.strokeStyle = "red";
+                    moveCtx.lineWidth = 3;
+
+                    moveCtx.beginPath();
+                    moveCtx.moveTo(topLeftX + 5, topLeftY + 5);
+                    moveCtx.lineTo(topLeftX + cellWidth - 5, topLeftY + cellHeight - 5);
+                    moveCtx.moveTo(topLeftX + 5, topLeftY + cellHeight - 5);
+                    moveCtx.lineTo(topLeftX + cellWidth - 5, topLeftY + 5);
+                    moveCtx.stroke();
+
+                    moveCtx.strokeStyle = "blue";
+                    moveCtx.lineWidth = 1;
+                }
+            }
+        }    
+
+        moveDiv.appendChild(moveCanv);
+        moveDetailDiv.appendChild(moveDetail);
+        moveDiv.appendChild(moveDetailDiv);
+        solDiv.appendChild(moveDiv);
+
+        if (move < solvedArr.length) {
+            perform_move(solvedArr[move][0], solvedArr[move][1]);
+        }
+
+        console.log("end of move ", i);
+    } // End solution move loop
+}
+
+function clearSolution() {
+    while (solDiv.firstChild) {
+        solDiv.removeChild(solDiv.firstChild);
     }
 }
