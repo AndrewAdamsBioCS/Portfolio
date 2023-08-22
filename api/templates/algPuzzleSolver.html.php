@@ -4,11 +4,11 @@
 
 <py-config>
 	[[fetch]]
-	files = ["./algPuzzleSolver.py"]
+	files = ["./algPuzzleSolverScript.py"]
 </py-config>
 
 <py-script>
-	from algPuzzleSolver import *
+	from algPuzzleSolverScript import *
 	
 	def new_puzzle():
 		global thisPuzz
