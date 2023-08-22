@@ -1,9 +1,3 @@
 {
   "installCommand": "amazon-linux-extras install php7.4",
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/api/index.php"
-    }
-  ]
 }
