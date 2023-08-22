@@ -7,65 +7,84 @@
 	files = ["./algPuzzleSolver.py"]
 </py-config>
 
-<div id="puzzle-solver">
-<div id="playPuzzDiv" style="width:50%; float:left; border:1px white dashed;">
-	<!-- hidden divs for javascript access to py-script results -->
-	<div hidden id="newPuzzArr"></div>
-	<div hidden id="solvedPuzzArr"></div>
-	<div hidden id="solvedStats"></div>
-
-	<py-script>
-		from algPuzzleSolver import *
+<py-script>
+	from algPuzzleSolver import *
 	
-		def new_puzzle():
-			global thisPuzz
-			thisPuzz = scramble(create_puzzle(4,4))
-			Element("newPuzzArr").write(thisPuzz)
+	def new_puzzle():
+		global thisPuzz
+		thisPuzz = scramble(create_puzzle(4,4))
+		Element("newPuzzArr").write(thisPuzz)
 
-		def solve(alg):
-			solvedStats = []
+	def solve(alg):
+		if alg == "DFS":
+			solved = depth_first(thisPuzz)
+		elif alg == "BFS":
+			solved = breadth_first(thisPuzz)
+		elif alg == "A-star":
+			solved = a_star(thisPuzz)
 
-			if alg == "DFS":
-				solved = depth_first(thisPuzz)
-			elif alg == "BFS":
-				solved = breadth_first(thisPuzz)
-			elif alg == "A-star":
-				solved = a_star(thisPuzz)
+		Element("solvedPuzzArr").write(solved)
 
-			#solvedStats.append(solved.pop(-1))
-			#solvedStats.append(solved.pop(-1))
+	# Create initial puzzle
+	new_puzzle()
+	#Element("puzzDesc").write("Turn off all the lights!")
+</py-script>
 
-			Element("solvedPuzzArr").write(solved)
-			#Element("solvedStats").write(solvedStats)
+<!-- hidden divs for javascript access to py-script results -->
+<div hidden id="newPuzzArr"></div>
+<div hidden id="solvedPuzzArr"></div>
 
-	</py-script>
+<div id="puzzle-solver">
+<div id="puzzle-left-div">
+<div id="playPuzzDiv">
+	<div id="puzzDesc" style="margin-bottom:10px;">Loading puzzle...</div>
+	<div id="puzzLoaded" style="min-width: 100%; display:none;">
+		<div id="puzzDiv" style="display:inline-block; width:50%; float:left;  border-right: 1px black dashed; overflow:scroll;">
+			<canvas id="play-puzz" width="200" height="200" style="float:left; margin-bottom:15px;"></canvas>
 
-	<canvas id="play-puzz" width="200" height="200"></canvas><br>
+			<button onclick="newPuzzle()" style="margin-right:15px;">New Puzzle</button>
+			<button onclick="resetPuzzle()">Reset Puzzle</button>
+		</div>
 
-	<button onclick="newPuzzle()">New Puzzle</button><br>
-	<div id="alg-btns" style="display: none;">
-		<button onclick="algSolver('DFS')">Solve with Depth-First Search</button><br>
-		<button onclick="algSolver('BFS')">Solve with Breadth-First Search</button><br>
-		<button onclick="algSolver('A-star')">Solve with A* Search</button><br>
+		<div id="algBtns" style="display:inline-block; width:50%; float:left; padding-left: 15px;">
+			<button onclick="algSolver('DFS')">Solve</button>: Depth-First Search<br>
+			<button onclick="algSolver('BFS')">Solve</button>: Breadth-First Search<br>
+			<button onclick="algSolver('A-star')">Solve</button>: A* Search<br>
+		</div>
 	</div>
-
-	<script src="/puzzleSolver.js?random=<?= uniqid() ?>"></script>
-	<script>
-		function newPuzzle(){
-			pyscript.interpreter.globals.get('new_puzzle')();
-			solveBtns = document.getElementById("alg-btns");
-			solveBtns.style.display = "block";
-			newPuzz();
-		}
-
-		function algSolver(alg) {
-			pyscript.interpreter.globals.get('solve')(alg);
-			showSolution();
-		}
-	</script>
-
 </div> <!-- End playPuzzDiv -->
 
-<div id="solutionDiv" style="width:50%; height:100%; float:left;border:1px white dashed; overflow-y: scroll;">
-</div>
-</div>
+<div id="projectDesc" style="display:none; width:90%; float:left; margin:20px; padding:5px; border:1px red solid;">Adapted from an academic project for <i>CMPT 310: Artificial Intelligence Survey</i>, taken Fall 2017 at Simon Fraser University (Instructor: Dr. Maxwell Libbrecht). The original project was a Python script using DFS, BFS, and A* algorithms to solve 100 randomly generated puzzles, reporting total moves, search steps, and completion time for each algorithm. Click <a href="algPuzzleSolverProject.py" target="_blank">here</a> to download the original Python script, adapted for this page using PyScript and JavaScript.</div>
+</div> <!-- End puzzle-left-div -->
+
+<div id="solutionDiv"></div>
+</div> <!-- End puzzle-solver div -->
+
+<script src="/scripts/puzzleSolver.js?random=<?= uniqid() ?>"></script>
+<script>
+	// Create initial puzzle
+	let initLoop = setInterval(initPuzzle, 1000);
+	function initPuzzle() {
+		if(document.getElementById("newPuzzArr").innerHTML != ""){
+			clearInterval(initLoop);
+			newPuzz();
+
+			description = "<i>Turn off all the lights!</i><br>Click a cell to toggle it and its neighbors (above/below, right/left). When toggled, lit (white) cells go dark, and unlit (black) cells light up. The puzzle is solved when all lights are out. Try it yourself, and then test out the solutions found by the different search algorithms.<br><br><hr><br>";
+			document.getElementById("puzzDesc").innerHTML = description;
+			document.getElementById("puzzLoaded").style.display = "block";
+			document.getElementById("projectDesc").style.display = "block";
+		}
+	}
+
+	function newPuzzle(){
+		pyscript.interpreter.globals.get('new_puzzle')();
+		document.getElementById("solutionDiv").style.display = "none";
+		newPuzz();
+	}
+
+	function algSolver(alg) {
+		pyscript.interpreter.globals.get('solve')(alg);
+		document.getElementById("solutionDiv").style.display = "block";
+		showSolution(alg);
+	}
+</script>

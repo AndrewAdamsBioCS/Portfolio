@@ -17,13 +17,13 @@
 	</div>-->
 
 
-<div class="about-more-info" style="margin-top:50px;">
+<div class="about-more-info">
 	
 		<h2><i>Education</i></h2>
 		<p>Bachelor of Science (BSc), Computing Science and Molecular Biology & Biochemistry (Joint Major)</p><br>
-		<p>&#x2022 Certificate in Genomics</p>
-		<p>&#x2022 Cooperative education</p>
-		<p>&#x2022 Graduated with distinction</p><br>
+		<ul><li>Certificate in Genomics</li>
+		<li>Cooperative education</li>
+		<li>Graduated with distinction</li><ul><br>
 		<p>Simon Fraser University</p>
 		<p>Burnaby, British Columbia, Canada</p>	
 </div>
@@ -31,11 +31,10 @@
 <div class="about-more-info" style="margin-top:50px;">
 <h3><i>More About Me</i></h2>
 <ul><li>Volunteer experience: preparing/serving meals at shelters and community outreach centers; working at music festivals and community events such as street fairs; and over a year of working for a small publishing company as a proofreader and copy-editor of novels</li>
-<li>Interests include:
-<ul><li>Reading &#8212; science fiction, fantasy, horror, philosophy, history</li>
+<li>Other interests include:
+<ul><li>Reading &#8212; science fiction, fantasy, horror, philosophy, history, science</li>
 <li>Travel &#8212; have traveled extensively throughout Europe and North America</li>
-<li>Music &#8212; enjoy playing guitar, drums, and piano</li>
-<li>Painting &#8212; influences include Surrealism and Abstract Expressionism</li>
+<li>Art &#8212; writing, painting/drawing, music</li>
 <li>Fitness &#8212; dedicated to nutrition and exercise as tools for health</li></ul>
 </li></ul>
 </div>

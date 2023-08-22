@@ -364,12 +364,6 @@ function keyPushDown(evt) {
 			resetGame()
 		}
 	}
-
-
-	// TESTING PURPOSES; REMOVE LATER
-	if (evt.key == "x") {
-		endGame();
-	}
 }
 
 function keyPushUp(evt) {

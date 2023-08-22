@@ -27,8 +27,12 @@ function newPuzz() {
     draw();
 }
 
+function resetPuzzle() {
+    puzzArr = JSON.parse(JSON.stringify(puzzStartStateCopy));
+    draw();
+}
+
 function userClick(e) {
-    console.log("userclick");
     // Get click coordinates
     let rect = puzzCanv.getBoundingClientRect();
     let row = e.clientY - rect.top;
@@ -90,7 +94,6 @@ function perform_move(row, col) {
 
 function toggle(row, col) {
     if (playerMove) {
-        console.log("playermove");
         if (puzzArr[row][col] == 0) {
             puzzArr[row][col] = 1;
         } else {
@@ -105,7 +108,7 @@ function toggle(row, col) {
     }
 }
 
-function showSolution() {
+function showSolution(alg) {
     // Clear solution div, in case solution algorithm has already been run
     clearSolution();
 
@@ -119,13 +122,23 @@ function showSolution() {
     solvedStats.push(solvedArr.pop());
     solvedStats.push(solvedArr.pop());
 
-    statStr = "Search steps: " + solvedStats[1] + "\n ";
-    statStr += "Time: " + solvedStats[0];
-    searchStats = document.createTextNode(statStr);
+    // Create information header for solution pane
+    statStr = "<strong>";
+    if (alg == "DFS") {
+        statStr += "Depth-First Search";
+    } else if (alg == "BFS") {
+        statStr += "Breadth-First Search";
+    } else if (alg == "A-star") {
+        statStr += "A* Search";
+    }
+    statStr += "</strong><br>"
+    statStr += "Search steps: " + solvedStats[1] + "<br>";
+    timeMilliSec = solvedStats[0] * 1000;
+    statStr += "Time: " + Math.round(timeMilliSec*100) / 100 + " milliseconds";
 
     searchStatsDiv = document.createElement("div");
     searchStatsDiv.style.margin = "10px";
-    searchStatsDiv.appendChild(searchStats);
+    searchStatsDiv.innerHTML = statStr;
     solDiv.appendChild(searchStatsDiv);
 
     // Create canvas elements for all solution steps
@@ -136,7 +149,7 @@ function showSolution() {
 
         thisMove = move + 1;
         if (move < solvedArr.length) {
-            detailStr = "Move " + thisMove + ": ";
+            detailStr = "<i>Move " + thisMove + ":</i> ";
             thisRow = solvedArr[move][0] + 1;
             thisCol = solvedArr[move][1] + 1;
             detailStr += "Row " + thisRow + ", Column " + thisCol;
@@ -145,7 +158,8 @@ function showSolution() {
         }
 
         moveDetailDiv = document.createElement("div");
-        moveDetail = document.createTextNode(detailStr);
+        //moveDetail = document.createTextNode(detailStr);
+        moveDetailDiv.innerHTML = detailStr;
 
         moveCanv = document.createElement("canvas");
         moveCanv.width = 200;
@@ -189,7 +203,7 @@ function showSolution() {
         }    
 
         moveDiv.appendChild(moveCanv);
-        moveDetailDiv.appendChild(moveDetail);
+        //moveDetailDiv.appendChild(moveDetail);
         moveDiv.appendChild(moveDetailDiv);
         solDiv.appendChild(moveDiv);
 
