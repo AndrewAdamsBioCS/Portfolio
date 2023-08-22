@@ -1,0 +1,3 @@
+{
+  "installCommand": "npm install && amazon-linux-extras install php7.4"
+}
