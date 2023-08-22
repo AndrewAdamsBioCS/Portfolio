@@ -5,8 +5,8 @@
 
     <title><?=$title?></title>
 
-    <link rel="stylesheet" type="text/css" href="css/homeStyle.css?random=<?= uniqid() ?>">
-    <link rel="stylesheet" type="text/css" href="css/gameStyle.css?random=<?= uniqid() ?>">
+    <link rel="stylesheet" type="text/css" href="css/homeStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/gameStyle.css">
 	
     </head>
  
