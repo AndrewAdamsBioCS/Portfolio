@@ -5,10 +5,11 @@
     }
   },
 
-  "redirects": [
+
+  "routes": [
     {
-      "source": "/*",
-      "destination": "/api/index.php"
+      "src": "/(.*)",
+      "dest": "/index.php"
     }
   ]
 }
