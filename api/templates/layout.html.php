@@ -5,8 +5,8 @@
 
     <title><?=$title?></title>
 
-    <link rel="stylesheet" type="text/css" href="css/homeStyle.css">
-    <link rel="stylesheet" type="text/css" href="css/gameStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/HomeStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/GameStyle.css">
 	
     </head>
  
