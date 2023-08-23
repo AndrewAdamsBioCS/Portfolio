@@ -30,7 +30,7 @@ try {
 }
 
 ob_start();
-include  __DIR__ . '/../templates/invaders.html.php';
+include  __DIR__ . '/templates/invaders.html.php';
 $output = ob_get_clean();
 
-include  __DIR__ . '/../templates/layout.html.php';
+include  __DIR__ . '/templates/layout.html.php';
