@@ -3,7 +3,7 @@
 header('Location: invaders.php');
 
 try {
-	$pdo = new PDO('mysql:host=localhost;dbname=high_scores;charset=utf8mb4', 'update', 'newscore');
+	$pdo = new PDO('mysql:host=localhost;dbname=high_scores;charset=utf8mb4', '#####', '#####');
 } catch (PDOException $e) {
 	$title = 'An error has occurred';
 
