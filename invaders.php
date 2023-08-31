@@ -1,12 +1,12 @@
 <?php
 
 try {
-    $pdo = new PDO('mysql:host=mysql;dbname=portfolio;charset=utf8mb4', 'v.je', 'v.je');
+    $pdo = new PDO('mysql:host=localhost;dbname=high_scores;charset=utf8mb4', 'update', 'newscore');
 
-    $sql = 'SELECT `name`, `score`, `id` FROM `high_scores` ORDER BY `score` DESC';
+    $sql = 'SELECT `name`, `score`, `id` FROM `high_scores`.`high_scores` ORDER BY `score` DESC';
     $scores = $pdo->query($sql)->fetchAll();
 
-    $sql = 'SELECT COUNT(*) FROM `high_scores`';
+    $sql = 'SELECT COUNT(*) FROM `high_scores`.`high_scores`';
 	$score_count = $pdo->query($sql)->fetchColumn();
 
     if ($score_count != 0) {

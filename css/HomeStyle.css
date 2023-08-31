@@ -25,13 +25,6 @@ header h1 {
     border: 1px solid white;
 }
 
-/*.header-title-bar {
-    min-width: 100%;
-    margin: 1em;
-    padding: 1em;
-    border: 1px solid white;
-}*/
-
 .header-title-bar-side {
     position: absolute;
     top: 2.5em;
@@ -42,7 +35,6 @@ header h1 {
 }
 
 .header-menu {
-    /*float: right;*/
     font-size: large;
     text-align: center;
 }
@@ -89,9 +81,8 @@ main {
     padding: 10px;
 }
 
-#about-div {
+.about-div {
     float: left;
-    width: 50%;
     padding: 30px;
     font-size: x-large;
     background-color: wheat;
@@ -101,8 +92,6 @@ main {
 
 .about-more-info {
     float: left;
-    width: 30%;
-    margin-left: 10%;
     padding: 30px;
     font-size: large;
     border: 1px red solid;
@@ -192,7 +181,6 @@ main {
 }
 
 .work-div {
-    /*margin-left: calc(25% + 20px);*/
     margin-top: 10px;
     margin-left: 25%;
     width: 50%;

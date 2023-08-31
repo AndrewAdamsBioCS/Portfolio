@@ -3,8 +3,7 @@
 header('Location: invaders.php');
 
 try {
-	//echo "in addrecord before db";
-	$pdo = new PDO('mysql:host=mysql;dbname=portfolio;charset=utf8mb4', 'v.je', 'v.je');
+	$pdo = new PDO('mysql:host=localhost;dbname=high_scores;charset=utf8mb4', 'update', 'newscore');
 } catch (PDOException $e) {
 	$title = 'An error has occurred';
 
@@ -16,7 +15,7 @@ try {
 
 // If "scores-reset" button is pushed, delete all scores from table
 if (isset($_POST['scores-reset'])) {
-	$sql = 'DELETE FROM `high_scores`';
+	$sql = 'DELETE FROM `high_scores`.`high_scores`';
 	$pdo->query($sql);
 }
 // Add new high score record to table
@@ -33,7 +32,7 @@ else {
 	$min_player_id = $_POST['min_player_id'];
 
 	if ($score_count >= 5) {
-		$sql = 'DELETE FROM `high_scores` WHERE
+		$sql = 'DELETE FROM `high_scores`.`high_scores` WHERE
 		`id` = :playerID';
 
 		$stmt = $pdo->prepare($sql);
@@ -41,7 +40,7 @@ else {
 		$stmt->execute();
 	}
 
-	$sql = 'INSERT INTO `high_scores` SET
+	$sql = 'INSERT INTO `high_scores`.`high_scores` SET
 		`name` = :playerName,
 		`score` = :playerScore';
 

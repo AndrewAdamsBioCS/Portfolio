@@ -58,6 +58,7 @@ var enemySize = 2.5;
 var bulletSize = 1.5;
 var bulletGenSize = 6;
 
+// Set game dimensions and player initial position
 var gs = 20;
 var tc = 20;
 var px = (tc / 2) - (playerSize / 2);
@@ -65,7 +66,7 @@ var py = tc - 2.5;
 var pxv = 0;
 var pyv = 0;
 
-
+// Set motion speeds
 var leftV = -0.5;
 var rightV = 0.5;
 var upV = -0.5;

@@ -61,7 +61,7 @@
 		<p>2016 - 2017; Vancouver, British Columbia, Canada</p>
 
 		<div style = "margin: 15px; padding: 10px; border: 1px black dotted;">
-		STEMCELL description.
+		A Vancouver-based biotechnology company focused on the development and manufacturing of reagents and instruments used in life science research. During my internship, I worked in the Research & Development department, helping to develop and improve various formulations of cell culture media used in stem cell research.
 		</div>
 
 		<div style = "padding: 10px;">
@@ -85,7 +85,7 @@
 		<p>2020 - 2021; Burnaby, British Columbia, Canada</p>
 
 		<div style = "margin: 15px; padding: 10px; border: 1px black dotted;">
-		Geochemical testing laboratory based in Burnaby, British Columbia.
+		Geochemical testing laboratory based in Burnaby, British Columbia, providing testing services on mineral samples from mining companies, environmental surveys, construction projects, and others.
 		</div>
 
 		<div style = "padding: 10px;">
@@ -98,7 +98,7 @@
 			</ul>
 		</div>
 
-		<p><strong>Skills</strong>:</p>
+		<p><strong>Skills</strong>: sample handling/preparation, pH testing, titrations, inventory management</p>
 	</div>
 </div> <!-- End lab-div -->
 
@@ -109,16 +109,16 @@
 		<p>2022 - 2023; Celina, Ohio, USA</p>
 
 		<div style = "margin: 15px; padding: 10px; border: 1px black dotted;">
-		Description
+		A third-party logistics company providing services for the warehousing/distribution industry.
 		</div>
 
 		<div style = "padding: 10px;">
 			<ul>
-			<li>1</li>
+			<li>Unloaded inbound product from shipping containers, separating by product type and palletizing for storage with distribution center inventory</li>
 
-			<li>2</li>
+			<li>Operated machines for on-demand production of packaging for orders; sorted packaging for efficient order fulfillment; loaded finished orders on outbound freight and parcel carriers</li>
 
-			<li>3</li>
+			<li>Managed trash/recycling streams, operating forklifts and compactors</li>
 			</ul>
 		</div>
 	</div>

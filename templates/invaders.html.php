@@ -96,7 +96,7 @@
 	<div id="commentary-div">
 	<p>Gameplay logic and graphics: JavaScript</p><br>
 	<p>Game display: HTML, CSS, PHP</p><br>
-	<p>"High Score" records maintained in MySQL database</p>
+	<p>"High Score" records maintained in MariaDB database</p>
 	<p style="font-size:small;">&emsp;&emsp;&#x2022 Use "Reset Scores" button, if needed, to test database functionality</p>
 	</div>
 
