@@ -1,7 +1,7 @@
 <?php
 
 try {
-    $pdo = new PDO('mysql:host=localhost;dbname=high_scores;charset=utf8mb4', 'update', 'newscore');
+    $pdo = new PDO('mysql:host=localhost;dbname=high_scores;charset=utf8mb4', '#####', '#####');
 
     $sql = 'SELECT `name`, `score`, `id` FROM `high_scores`.`high_scores` ORDER BY `score` DESC';
     $scores = $pdo->query($sql)->fetchAll();
