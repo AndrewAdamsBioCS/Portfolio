@@ -89,7 +89,7 @@
 			<p>Fire cookie: Space bar</p>
 			</div>
 
-			<script src="/scripts/invaders.js?random=<?= uniqid() ?>"></script>
+			<script src="/scripts/invaders.js"></script>
 		</div> <!--end high-scores-div-->	
 	</div> <!--end game-div-->
 

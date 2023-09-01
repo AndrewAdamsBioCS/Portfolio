@@ -71,7 +71,7 @@ main {
     margin-top: var(--header-height);
     height: calc(100% - var(--header-height));
     background-color: tan;
-    overflow: scroll;
+    overflow: auto;
 }
 
 #about-container {
@@ -117,14 +117,10 @@ main {
     float: left;
     border: 1px white dashed;
     border-bottom: 5px black solid;
-    overflow: scroll;
+    overflow-y: auto;
 }
 
 .project-description h1 {
-    font-style: italic;
-}
-
-.project-description a {
     font-style: italic;
 }
 
@@ -186,16 +182,12 @@ main {
     width: 50%;
 }
 
-.experience-div {    
+.experience-div {
     padding: 30px;
-    margin-bottom: 20px;   
+    margin-bottom: 20px;
     font-size: large;
     border: 1px white dashed;
-    overflow: scroll;
-}
-
-.experience-duties {
-    padding: 10px;
+    overflow-y: auto;
 }
 
 #puzzle-solver {
@@ -222,6 +214,14 @@ main {
     border-radius: 10px 10px 0 0;
 }
 
+#puzzDiv {
+    display: inline-block;
+    width: 50%;
+    float: left;
+    border-right: 1px black dashed;
+    overflow: auto;
+}
+
 #playPuzzDiv button {
     padding:3px;
 }
@@ -235,7 +235,7 @@ main {
     background-color: wheat;
     border: 1px white dashed;
     border-radius: 10px;
-    overflow: scroll;
+    overflow: auto;
 }
 
 /* CSS to hide py-script loading messages */

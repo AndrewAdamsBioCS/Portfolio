@@ -22,7 +22,7 @@
 	<div class="project-description">
 	<h1><a href="https://awadams-bio-cs.shinyapps.io/DataAnalysisApp/" target="_blank">Statistical Analysis App</a></h1>
 	<p>An interactive app for performing basic statistical analysis of data sets. View summary statistics and generate plots and regression analysis, and save custom plots into a downloadable package.</p>
-	<p>Although I have some past experience with R, this was my first time using Shiny, a package for building R-based web applications.</p>
+	<p>Although I have some past experience with R, this was my first time using Shiny, a package for building R-based web applications. See the code for this app on my <a href="https://github.com/AndrewAdamsBioCS/ShinyApp" target="_blank">GitHub</a>.</p>
 	<p>
 	<strong>Skills</strong>: R, Shiny, HTML, CSS, data analysis, statistics
 	</p>

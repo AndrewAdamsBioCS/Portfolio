@@ -39,7 +39,7 @@
 <div id="playPuzzDiv">
 	<div id="puzzDesc" style="margin-bottom:10px;">Loading puzzle...</div>
 	<div id="puzzLoaded" style="min-width: 100%; display:none;">
-		<div id="puzzDiv" style="display:inline-block; width:50%; float:left;  border-right: 1px black dashed; overflow:scroll;">
+		<div id="puzzDiv">
 			<canvas id="play-puzz" width="200" height="200" style="float:left; margin-bottom:15px;"></canvas>
 
 			<button onclick="newPuzzle()" style="margin-right:15px;">New Puzzle</button>
