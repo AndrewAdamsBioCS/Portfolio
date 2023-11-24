@@ -2,12 +2,12 @@
 <div id="about-container">
 	<div style="float:left; width:50%;">
 	<div class="about-div">
-		<p><i>Programming. Software development. Web design. Data analysis. Bioinformatics. Algorithms. Artificial intelligence.</i></p><br><br>
+		<p><i>Full-stack web and software development. Data Analysis. Bioinformatics. Artificial Intelligence.</i></p><br><br>
 		<p>			I love learning about the world and understanding how things work. Systems fascinate me. I have a special interest in biology, especially molecular biology, and would love to apply my computing skills to research in that field.</p>
 		<br><br>
 		<p>Explore my site (designed and coded by me) to see my work experience and personal/academic projects demonstrating my skill set. Check out my <a href="https://github.com/AndrewAdamsBioCS/Portfolio" target="_blank">GitHub</a> to view the code for everything on this site, and visit me on <a href="https://www.codingame.com/profile/3958643bc0336b2aa7a3c221d6213dce0003945" target="_blank">CodinGame</a> to see all the coding puzzles and challenges I have completed.</p>
 	</div>
-	<div class="about-div" style="float:left; margin-top:50px;"><i>This site developed using Docker, and hosted on AWS Lightsail with a Bitnami NGINX (LEMP) stack.</i></div>
+	<div class="about-div" style="float:left; margin-top:50px;"><i>This site hosted on AWS Lightsail with a Bitnami NGINX (LEMP) stack.</i></div>
 	</div>
 
 	<div style="float:left; width:30%; margin-left:10%;">
