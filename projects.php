@@ -1,6 +1,6 @@
 <?php
 
-$title = 'Andrew Adams: Computer Science Wiz';
+$title = 'Andrew Adams';
 
 ob_start();
 include  __DIR__ . '/templates/projects.html.php';
